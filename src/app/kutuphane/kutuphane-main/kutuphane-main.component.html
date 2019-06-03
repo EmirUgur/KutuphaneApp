@@ -10,6 +10,7 @@
         <fa-icon class="sil" [icon]="['fas', 'trash']" (click)="kitapService.kitapSil(kitap)" style="margin-left: 12px; font-size: 20px"> </fa-icon>
     </li>
 </ul>
+<div class="kitap center diger" *ngIf="kitaplar.length==0">Hiç kitap eklememişsiniz.</div>
 <div *ngIf="editMode" class="duzenleBg">
     <div class="duzenleContainer">
         <p class="head1">Düzenle</p>

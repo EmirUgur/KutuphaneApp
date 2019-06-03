@@ -1,5 +1,5 @@
 .kitap {
-    background-color: rgba($color: #000000, $alpha: .05);
+    background-color: #fafafa;
     border-radius: 5px;
     list-style: none;
     padding: 15px;
@@ -7,7 +7,7 @@
     margin-top: 10px;
 }
 .kitap:hover{
-    background-color: rgba($color: #000000, $alpha: .07);
+    background-color: #fffefe;
 }
 .kitap .ad {
     font-size: 24px;
@@ -45,6 +45,6 @@
     margin: 10% auto;
     padding: 10px;
     border-radius: 5px;
-    background-color: #ebe8e8;
+    background-color: #fffefe;
 }
   

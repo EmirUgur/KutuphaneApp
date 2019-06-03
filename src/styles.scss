@@ -3,11 +3,11 @@
 
 $primary-renk: #2962ff;
 $accent-renk: #dd2c00;
-    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
 
 body {
     background-color: #f1f1f1;
-    font-family: Montserrat;
+    font-family: Roboto;
     margin: 0px;
 }
 
@@ -17,11 +17,12 @@ body {
     font-size:14px;
     border-width:0px 0px 3px 0px;
     border-style:solid solid solid solid;
-    border-bottom-color: #c7c7c7;
+    border-bottom-color: #dddddd;
+    background-color: rgba($color: #000000, $alpha: 0.0);
     margin-top: 5px;
-    border-radius: 5px;
     transition: 0.25s;
-    font-family: Montserrat;
+    font-family: Roboto;
+    font-weight: light;
 }
 .textbox:focus {
     border-bottom-color: #43cc77;
@@ -53,7 +54,7 @@ body {
     transition: 0.1s;
     font-size: 16px;
     cursor: pointer;
-    font-family: Montserrat;
+    font-family: Roboto;
 }
 .buttonNormal:hover {
     border-color: #1c59ff;
@@ -73,7 +74,7 @@ body {
     transition: 0.1s;
     font-size: 16px;
     cursor: pointer;
-    font-family: Montserrat;
+    font-family: Roboto;
 }
 .buttonDiger:hover {
     border-color: #ee481e;
@@ -87,4 +88,12 @@ body {
 ::placeholder{
     color: rgba($color: #000000, $alpha: 0.3);
     font-size: 12px;
+}
+
+a {
+    color: #2b51b8;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: underline;
 }

@@ -22,8 +22,13 @@ export class AuthService {
     });
   }
 
-  kayitOl(email: string, sifre: string) {
-    this.auth.auth.createUserWithEmailAndPassword(email, sifre);
+  async kayitOl(email: string, sifre: string) {
+    try {
+      await this.auth.auth.createUserWithEmailAndPassword(email, sifre);
+      this.toastr.success('Hesap oluşturuldu. Şimdi giriş yapabilirsiniz.', 'Başarılı');
+    } catch (e) {
+      this.toastr.error(e.message, 'HATA');
+    }
   }
   async girisYap(email: string, sifre: string) {
     try {

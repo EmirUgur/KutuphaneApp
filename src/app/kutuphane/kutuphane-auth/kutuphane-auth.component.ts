@@ -22,25 +22,11 @@ export class KutuphaneAuthComponent implements OnInit {
     }
   }
 
-  auth(islem) {
-    switch (islem) {
-      // giriş yap
-      case 0:
-      this.authService.girisYap(this.eposta, this.sifre);
-      break;
-
-      // kayıt ol
-      case 1:
-      this.authService.kayitOl(this.eposta, this.sifre);
-      break;
-
-      // çıkış yap
-      case 2:
-      this.authService.cikisYap();
-      break;
-      default:
-        break;
-    }
+  girisYap() {
+    this.authService.girisYap(this.eposta, this.sifre);
   }
 
+  kayitRedirect() {
+    this.route.navigate(['auth/kayit-ol']);
+  }
 }

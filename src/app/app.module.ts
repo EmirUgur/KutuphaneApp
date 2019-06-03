@@ -21,11 +21,13 @@ import { AuthProfilComponent } from './kutuphane/auth-profil/auth-profil.compone
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { KutuphaneKayitComponent } from './kutuphane/kutuphane-kayit/kutuphane-kayit.component';
 
 const Routes = [
-  { path: 'auth',  component: KutuphaneAuthComponent },
+  { path: 'auth',  component: KutuphaneAuthComponent},
+  { path: 'auth/kayit-ol', component: KutuphaneKayitComponent },
   { path: 'profil', component: AuthProfilComponent },
-  { path: '', component: KutuphaneMainComponent }
+  { path: '', component: KutuphaneMainComponent, pathMatch: 'full' }
 ];
 
 const firebaseConfig = {
@@ -45,7 +47,8 @@ const firebaseConfig = {
     KutuphaneMainComponent,
     KutuphaneAuthComponent,
     KutuphaneNavComponent,
-    AuthProfilComponent
+    AuthProfilComponent,
+    KutuphaneKayitComponent
   ],
   imports: [
     BrowserModule,
