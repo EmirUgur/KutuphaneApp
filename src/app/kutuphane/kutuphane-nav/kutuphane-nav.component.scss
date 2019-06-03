@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+.navbar {
+    padding: 25px;
+    color: white;
+    overflow: hidden;
+    background-color: $primary-renk;
+}
+.navbar .baslik {
+    font-size: 24px;
+    padding-right: 10px;
+    display: inline;
+}
+.navbar .item {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    margin: 0px 5px 0px 5px;
+    display: inline;
+    background-color: rgba(255,255,255, 0)
+}
+.navbar .item:hover {
+    background-color: rgba(255,255,255, 0.1);
+}

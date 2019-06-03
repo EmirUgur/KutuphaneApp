@@ -1,0 +1,50 @@
+.kitap {
+    background-color: rgba($color: #000000, $alpha: .05);
+    border-radius: 5px;
+    list-style: none;
+    padding: 15px;
+    width: 74.5%;
+    margin-top: 10px;
+}
+.kitap:hover{
+    background-color: rgba($color: #000000, $alpha: .07);
+}
+.kitap .ad {
+    font-size: 24px;
+    font-weight: bold;
+}
+.kitap .diger {
+    font-size: 12px;
+}
+.kitap .sil {
+    margin-top: 10px;
+    cursor: pointer;
+}
+.kitap .duzenle:hover {
+    color: #0059ff;
+    cursor: pointer;
+}
+.kitap .sil:hover {
+    color: red;
+}
+
+.duzenleBg {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: 0.25s ease-in-out;
+    background-color: rgba(0,0,0,0.4);
+}
+.duzenleContainer {
+    position: relative;
+    width: 75%;
+    margin: 10% auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ebe8e8;
+}
+  

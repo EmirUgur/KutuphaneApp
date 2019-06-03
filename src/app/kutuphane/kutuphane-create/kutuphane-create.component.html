@@ -1,0 +1,28 @@
+<div class="createContainer center">
+  <p class="head1">Kitap Ekle</p>
+  <div>
+      <label>
+          <b>Kitap Adı</b>
+            <input placeholder="Kitap adı.." type="text" class="textbox" [(ngModel)]="ad" required>
+        </label>
+  </div>
+  <div style="margin-top: 15px;">
+      <label>
+          <b>Yazarı</b>
+            <input placeholder="Yazarı.." type="text" class="textbox" [(ngModel)]="yazar" required>
+        </label>
+  </div>
+  <div style="margin-top: 15px;">
+      <label>
+          <b>Yayım Tarihi</b>
+            <input placeholder="Yayım tarihi.." type="date" class="textbox" [(ngModel)]="tarih" required>
+        </label>
+  </div>
+  <div style="margin-top: 15px; margin-bottom: 10px;">
+      <label>
+          <b>Sayfa Sayısı</b>
+            <input placeholder="Sayfa sayısı.." type="number" class="textbox" [(ngModel)]="sayfa" required>
+        </label>
+  </div>
+  <input type="button" class="buttonNormal" value="Ekle" (click)="fs.kitapEkle(ad, yazar, tarih, sayfa)">
+</div>
