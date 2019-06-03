@@ -4,14 +4,14 @@
     <b> E-Posta </b>
     <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
     <br>
-  <input (keyup.enter)="auth(0)"  class="textbox" placeholder="E-Posta..." [(ngModel)]="eposta" type="text" autofocus required>
+  <input (keyup.enter)="kayitOl()"  class="textbox" placeholder="E-Posta..." [(ngModel)]="eposta" type="text" autofocus required>
 </label>
 <br><br>
 <label>   
   <b>Şifre</b>
   <fa-icon style="margin-left: 5px" [icon]="['fas', 'key']"></fa-icon>
   <br>
-    <input (keyup.enter)="auth(0)"  class="textbox" placeholder="Şifre..." [(ngModel)]="sifre" type="password" required>
+    <input (keyup.enter)="kayitOl()"  class="textbox" placeholder="Şifre..." [(ngModel)]="sifre" type="password" required>
 </label>
 <br><br>
 <input type="button" value="Kayıt Ol" class="buttonNormal" (click)="kayitOl()">
