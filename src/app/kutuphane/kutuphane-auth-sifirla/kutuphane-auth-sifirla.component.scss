@@ -1,0 +1,17 @@
+.sifirlaContainer {
+    width: 25%;
+    height: 50%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fffefe;
+    margin-top: 25px;
+}
+.geri {
+    float: left;
+    color: rgba($color: #000000, $alpha: 0.4);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out
+}
+.geri:hover {
+    color: rgba($color: #000000, $alpha: 0.7)
+}

@@ -47,4 +47,11 @@ export class AuthService {
     const  user  =  JSON.parse(localStorage.getItem('user'));
     return  user  !==  null;
 }
+  sifreSifirla(eposta: string) {
+    const auth = firebase.auth();
+
+    return auth.sendPasswordResetEmail(eposta)
+      .then(() => this.toastr.success('Şifre sıfırlama e-postası gönderildi.'))
+      .catch((error) => this.toastr.error(error, 'HATA'));
+  }
 }

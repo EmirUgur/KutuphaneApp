@@ -1,8 +1,9 @@
 @import '../../../styles.scss';
 .navbar {
     padding: 25px;
-    color: white;
+    position: relative;
     overflow: hidden;
+    color: white;
     background-color: $primary-renk;
 }
 .navbar .baslik {

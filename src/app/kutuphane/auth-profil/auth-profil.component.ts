@@ -16,4 +16,7 @@ export class AuthProfilComponent implements OnInit {
   ngOnInit() {
   }
 
+  sifirla() {
+    this.as.sifreSifirla(this.email);
+  }
 }

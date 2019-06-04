@@ -17,11 +17,15 @@ export class KutuphaneMainComponent implements OnInit {
   kitaplar: Kitap[];
 
   editMode = false;
+  silMode = false;
+
   duzenleAd;
   duzenleYazar;
   duzenleTarih;
   duzenleSayfa;
   duzenlenecekKitap: Kitap;
+
+  silinecekKitap: Kitap;
 
   constructor(
     public as: AuthService,
@@ -61,7 +65,16 @@ export class KutuphaneMainComponent implements OnInit {
       this.kitapService.kitapDuzenle(this.duzenlenecekKitap, this.duzenleAd, this.duzenleYazar, this.duzenleTarih, this.duzenleSayfa);
     }
   }
+  sil(kitap: Kitap) {
+    this.silinecekKitap = kitap;
+    this.silMode = true;
+  }
+  kitapSil() {
+    this.kitapService.kitapSil(this.silinecekKitap);
+    this.iptal();
+  }
   iptal() {
     this.editMode = false;
+    this.silMode = false;
   }
 }

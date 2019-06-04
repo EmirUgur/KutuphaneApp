@@ -29,4 +29,8 @@ export class KutuphaneAuthComponent implements OnInit {
   kayitRedirect() {
     this.route.navigate(['auth/kayit-ol']);
   }
+
+  sifirlaRedirect() {
+    this.route.navigate(['auth/sifirla']);
+  }
 }

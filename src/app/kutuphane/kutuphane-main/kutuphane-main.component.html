@@ -7,12 +7,12 @@
     <li class="diger">Sayfa: {{kitap.sayfa}}</li>
     <li style="margin-top: 5px; font-size: 20px">
         <fa-icon class="duzenle" [icon]="['fas', 'edit']" (click)="duzenle(kitap.ad, kitap.yazar, kitap.tarih, kitap.sayfa, kitap)"></fa-icon>
-        <fa-icon class="sil" [icon]="['fas', 'trash']" (click)="kitapService.kitapSil(kitap)" style="margin-left: 12px; font-size: 20px"> </fa-icon>
+        <fa-icon class="sil" [icon]="['fas', 'trash']" (click)="sil(kitap)" style="margin-left: 12px; font-size: 20px"> </fa-icon>
     </li>
 </ul>
 <div class="kitap center diger" *ngIf="kitaplar.length==0">Hiç kitap eklememişsiniz.</div>
-<div *ngIf="editMode" class="duzenleBg">
-    <div class="duzenleContainer">
+<div *ngIf="editMode || silMode" class="duzenleBg">
+    <div *ngIf="editMode" class="duzenleContainer">
         <p class="head1">Düzenle</p>
         <div>
             <label>
@@ -40,5 +40,13 @@
         </div>
         <input type="button" style="width: 75%" class="buttonNormal" value="Kaydet" (click)="kaydet()">
         <input type="button" style="width: 24%; margin-left: 5px" class="buttonDiger" value="İptal" (click)="iptal()">
+    </div>
+    <div *ngIf="silMode" class="duzenleContainer" style="width: 25%">
+        <p class="head1">Sil</p>
+        <div class="margin-top:10px;">
+            {{silinecekKitap.ad}} adlı kitap silinecek. Emin misiniz?
+        </div>
+        <input type="button" style="margin-bottom: 5px; margin-top: 10px" class="buttonNormal" value="Sil" (click)="kitapSil()">
+        <input type="button" class="buttonDiger" value="İptal" (click)="iptal()">
     </div>
 </div>

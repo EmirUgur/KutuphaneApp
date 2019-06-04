@@ -15,17 +15,19 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {library} from '@fortawesome/fontawesome-svg-core';
-import { faEnvelope, faKey, faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faKey, faTrash, faEdit, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { KutuphaneNavComponent } from './kutuphane/kutuphane-nav/kutuphane-nav.component';
 import { AuthProfilComponent } from './kutuphane/auth-profil/auth-profil.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { KutuphaneKayitComponent } from './kutuphane/kutuphane-kayit/kutuphane-kayit.component';
+import { KutuphaneAuthSifirlaComponent } from './kutuphane/kutuphane-auth-sifirla/kutuphane-auth-sifirla.component';
 
 const Routes = [
   { path: 'auth',  component: KutuphaneAuthComponent},
   { path: 'auth/kayit-ol', component: KutuphaneKayitComponent },
+  { path: 'auth/sifirla', component: KutuphaneAuthSifirlaComponent },
   { path: 'profil', component: AuthProfilComponent },
   { path: '', component: KutuphaneMainComponent, pathMatch: 'full' }
 ];
@@ -48,7 +50,8 @@ const firebaseConfig = {
     KutuphaneAuthComponent,
     KutuphaneNavComponent,
     AuthProfilComponent,
-    KutuphaneKayitComponent
+    KutuphaneKayitComponent,
+    KutuphaneAuthSifirlaComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,6 @@ const firebaseConfig = {
 })
 export class AppModule {
   constructor() {
-    library.add(faEnvelope, faKey, faTrash, faEdit);
+    library.add(faEnvelope, faKey, faTrash, faEdit, faArrowLeft);
   }
 }

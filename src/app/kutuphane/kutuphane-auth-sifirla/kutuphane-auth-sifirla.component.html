@@ -1,0 +1,11 @@
+<div class="sifirlaContainer center">
+  <p class="head1" style="margin-bottom: 15px;"> <fa-icon (click)="geri()" class="geri" [icon]="['fas', 'arrow-left']"></fa-icon> Şifreni Sıfırla </p>
+  <label>
+      <b> E-Posta </b>
+      <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+      <br>
+    <input (keyup.enter)="sifirla()"  class="textbox" placeholder="E-Posta..." [(ngModel)]="eposta" type="text" autofocus required>
+  </label> 
+  <br><br>
+  <input type="button" value="Sıfırla" class="buttonNormal" (click)="sifirla()">
+  </div>
